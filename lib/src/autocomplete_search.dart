@@ -237,6 +237,17 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
 
   Widget _buildSearchingOverlay() {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(8)),
+        boxShadow: [
+          BoxShadow(
+              color: const Color(0x1a000000),
+              offset: Offset(0, 2),
+              blurRadius: 15,
+              spreadRadius: 0)
+        ],
+        color: Colors.white,
+      ),
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
       child: Row(
         children: <Widget>[
